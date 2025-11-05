@@ -5,7 +5,9 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
+import { FileText } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -174,6 +176,16 @@ export default function Page() {
                 and I&apos;ll respond whenever I can. I will ignore all
                 soliciting.
               </p>
+              {DATA.resumeUrl && (
+                <div className="pt-4">
+                  <Link href={DATA.resumeUrl} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="gap-2">
+                      <FileText className="size-4" />
+                      View Resume
+                    </Button>
+                  </Link>
+                </div>
+              )}
             </div>
           </BlurFade>
         </div>

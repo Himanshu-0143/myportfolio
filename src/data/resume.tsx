@@ -11,7 +11,8 @@ export const DATA = {
     "Fullstack Developer. I love building things and helping people. Very active on Linkedin.",
   summary: `Hey! I’m Himanshu, a passionate Full Stack Developer who loves building things that live on the internet. I create dynamic, scalable applications using modern web technologies and enjoy taking a project from zero to deployment. Whether it’s writing clean UI code or optimizing databases and APIs — I love doing it all. I believe great products are a blend of performance, creativity, and good user experience. Always learning. Always improving. Always building something cool! 🚀`,
 
-  avatarUrl: "",
+  avatarUrl: "/my.jpg.jpg",
+  resumeUrl: "https://drive.google.com/file/d/1k7DR_D3MRxErg0l89V4O6k4tzERP2B9M/view?usp=sharing",
   work: [
     {
       company: "Freelance Projects",
@@ -125,7 +126,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Developed a responsive web app for online food ordering featuring real-time dynamic cart, menu filters, and order summary. Focused on smooth UX using JavaScript and DOM optimization. Mobile-first and performance-optimized UI.",
+        "**Coming Soon** - Developed a responsive web app for online food ordering featuring real-time dynamic cart, menu filters, and order summary. Focused on smooth UX using JavaScript and DOM optimization. Mobile-first and performance-optimized UI.",
       technologies: [
         "HTML5",
         "CSS3",
@@ -141,7 +142,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Built a full-stack calendar app supporting event creation, editing, and deletion. Integrated persistent MySQL storage and built robust PHP backend APIs. Designed minimal UI using Tailwind CSS with real-time updates.",
+        "**Coming Soon** - Built a full-stack calendar app supporting event creation, editing, and deletion. Integrated persistent MySQL storage and built robust PHP backend APIs. Designed minimal UI using Tailwind CSS with real-time updates.",
       technologies: [
         "PHP",
         "Tailwind CSS",
@@ -157,7 +158,7 @@ export const DATA = {
       dates: "2023",
       active: true,
       description:
-        "Engineered a multi-threaded real-time chat app using Java Sockets and Swing GUI. Implemented secure client-server communication and user-friendly message UI with connection status indicators.",
+        "**Coming Soon** - Engineered a multi-threaded real-time chat app using Java Sockets and Swing GUI. Implemented secure client-server communication and user-friendly message UI with connection status indicators.",
       technologies: [
         "Java",
         "Swing",
