@@ -8,7 +8,7 @@ export const DATA = {
   location: "Lucknow, Uttar Pradesh",
   locationLink: "https://www.google.com/maps/place/lucknow",
   description:
-    "Fullstack Developer. I love building things and helping people. Very active on Linkedin. ",
+    "Fullstack Developer. I love building things and helping people. Very active on LinkedIn.",
   summary: `Hey! I’m Himanshu, a passionate Full Stack Developer who loves building things that live on the internet. I create dynamic, scalable applications using modern web technologies and enjoy taking a project from zero to deployment. Whether it’s writing clean UI code or optimizing databases and APIs — I love doing it all. I believe great products are a blend of performance, creativity, and good user experience. Always learning. Always improving. Always building something cool! 🚀`,
 
   avatarUrl: "/my.jpg.jpg",
@@ -19,9 +19,9 @@ export const DATA = {
       title: "Full Stack Developer (Freelance)",
       start: "Jan 2024",
       end: null,
-      description: "Working on various freelance projects, building full-stack applications for clients using modern web technologies.",
+      description: "Built a fully functional full-stack website with online order creation and a secure payment gateway for Life-Biotech, a pharmaceutical manufacturing brand. Developed using modern web technologies with focus on security and user experience.",
       logoUrl: "",
-      href: "#",
+      href: "https://lifebiotech.in",
       badges: ["React", "Next.js", "Node.js", "TypeScript"],
     },
   ],
@@ -56,7 +56,7 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
+    email: "himansingh8511@gmail.com",
     tel: "+123456789",
     social: {
       GitHub: {
@@ -99,11 +99,11 @@ export const DATA = {
   projects: [
     {
       title: "Life-Biotech",
-      href: "https://himanshu-chauhan.vercel.app",
+      href: "https://lifebiotech.in",
       dates: "2025",
       active: true,
       description:
-        "A full-stack website built for Life-Biotech, a pharmaceutical manufacturing brand — includes a secure and smart admin panel for efficient product and workflow management.",
+        "A full-stack website built for Life-Biotech, a pharmaceutical manufacturing brand — includes a secure and smart login authentication system.",
       technologies: [
         "React",
         "Next.js",
@@ -112,12 +112,17 @@ export const DATA = {
       ],
       links: [
         {
+          type: "lifebiotech.in",
+          href: "https://lifebiotech.in",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
           type: "View Source",
           href: "https://github.com/Himanshu-0143/lifebiotech.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/lifebiotech.png",
       video: undefined,
     },
     {
@@ -140,7 +145,7 @@ export const DATA = {
         },
         
       ],
-      image: "",
+      image: "/quite.png",
       video: undefined,
     },
     

@@ -4,12 +4,6 @@
 
 To use your profile picture (`my.jpg`), follow these steps:
 
-1. **Place your image file** in the `public` folder:
-   ```
-   portfolio/public/my.jpg
-   ```
-
-2. **The code is already updated** to use `/my.jpg` as your avatar URL.
 
 3. **Verify the image:**
    - Make sure the file is named exactly `my.jpg` (case-sensitive)

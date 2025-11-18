@@ -170,26 +170,32 @@ export default function Page() {
                 <GradientText>Get in Touch</GradientText>
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground text-base sm:text-lg md:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Want to chat? Feel free to reach out via email or connect with me on{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href={DATA.contact.social.LinkedIn.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                  LinkedIn
+                </Link>
+                . I&apos;m always open to discussing new projects and opportunities!
               </p>
-              {DATA.resumeUrl && (
-                <div className="pt-4">
-                  <Link href={DATA.resumeUrl} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="gap-2 h-11 px-5 text-base group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:scale-105 hover:border-primary/50">
+              <div className="pt-4 flex flex-wrap gap-3 justify-center">
+                <Button asChild variant="default" className="gap-2 h-11 px-5 text-base group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:scale-105">
+                  <Link href={`mailto:${DATA.contact.email}`}>
+                    Contact Me
+                  </Link>
+                </Button>
+                {DATA.resumeUrl && (
+                  <Button asChild variant="outline" className="gap-2 h-11 px-5 text-base group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:scale-105 hover:border-primary/50">
+                    <Link href={DATA.resumeUrl} target="_blank" rel="noopener noreferrer">
                       <FileText className="size-5 group-hover:rotate-12 transition-transform" />
                       View Resume
-                    </Button>
-                  </Link>
-                </div>
-              )}
+                    </Link>
+                  </Button>
+                )}
+              </div>
             </div>
           </BlurFade>
         </div>

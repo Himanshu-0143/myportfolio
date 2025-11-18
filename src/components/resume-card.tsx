@@ -3,9 +3,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -29,7 +30,7 @@ export const ResumeCard = ({
   period,
   description,
 }: ResumeCardProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(true);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (description) {
@@ -39,12 +40,8 @@ export const ResumeCard = ({
   };
 
   return (
-    <Link
-      href={href || "#"}
-      className="block cursor-pointer min-h-[56px]"
-      onClick={handleClick}
-    >
-      <Card className="flex hover:bg-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] relative overflow-hidden group">
+    <div className="block min-h-[56px]">
+      <Card className="flex hover:bg-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] relative overflow-hidden group cursor-pointer" onClick={(e) => { if (description) { setIsExpanded(!isExpanded); } }}>
         <div className="flex-none p-3 sm:p-4">
           <Avatar className="border size-12 sm:size-14 m-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
@@ -98,13 +95,21 @@ export const ResumeCard = ({
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="px-3 sm:px-4 pb-3 sm:pb-4 text-xs sm:text-sm text-muted-foreground"
+              className="px-3 sm:px-4 pb-3 sm:pb-4"
             >
-              {description}
+              <p className="text-xs sm:text-sm text-muted-foreground mb-3">{description}</p>
+              {href && href !== "#" && (
+                <Link href={href} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <Button variant="outline" size="sm" className="gap-2 h-8 text-xs">
+                    <ExternalLinkIcon className="size-3" />
+                    Visit Website
+                  </Button>
+                </Link>
+              )}
             </motion.div>
           )}
         </div>
       </Card>
-    </Link>
+    </div>
   );
 };
