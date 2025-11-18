@@ -40,8 +40,8 @@ export const ResumeCard = ({
   };
 
   return (
-    <div className="block min-h-[56px]">
-      <Card className="flex hover:bg-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] relative overflow-hidden group cursor-pointer" onClick={(e) => { if (description) { setIsExpanded(!isExpanded); } }}>
+    <div className="block min-h-[56px] w-full">
+      <Card className="flex flex-col sm:flex-row hover:bg-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] relative overflow-hidden group cursor-pointer" onClick={(e) => { if (description) { setIsExpanded(!isExpanded); } }}>
         <div className="flex-none p-3 sm:p-4">
           <Avatar className="border size-12 sm:size-14 m-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
@@ -52,13 +52,21 @@ export const ResumeCard = ({
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
-        <div className="flex-grow ml-2 items-center flex-col group">
-          <CardHeader className="p-3 sm:p-4">
-            <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-sm sm:text-base gap-2">
-                {title}
+        <div className="flex-grow ml-0 sm:ml-2 items-center flex-col group w-full">
+          <CardHeader className="p-3 sm:p-4 pt-0 sm:pt-3">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-y-1 sm:gap-x-2 text-base">
+              <h3 className="inline-flex items-start sm:items-center flex-col sm:flex-row font-semibold leading-none text-sm sm:text-base gap-1 sm:gap-2">
+                <span className="flex items-center gap-2">
+                  {title}
+                  <ChevronRightIcon
+                    className={cn(
+                      "size-4 sm:size-5 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                      isExpanded ? "rotate-90" : "rotate-0"
+                    )}
+                  />
+                </span>
                 {badges && (
-                  <span className="inline-flex gap-x-1.5 flex-wrap">
+                  <span className="inline-flex gap-1.5 flex-wrap mt-1 sm:mt-0">
                     {badges.map((badge, index) => (
                       <Badge
                         variant="secondary"
@@ -70,14 +78,8 @@ export const ResumeCard = ({
                     ))}
                   </span>
                 )}
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 sm:size-5 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right whitespace-nowrap">
+              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-left sm:text-right whitespace-nowrap">
                 {period}
               </div>
             </div>
