@@ -65,7 +65,7 @@ export default async function Blog({
   }
 
   return (
-    <section id="blog">
+    <section id="blog" className="max-w-4xl mx-auto">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -88,18 +88,27 @@ export default async function Blog({
           }),
         }}
       />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
-        {post.metadata.title}
-      </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
-        <Suspense fallback={<p className="h-5" />}>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            {formatDate(post.metadata.publishedAt)}
+      <header className="mb-10 space-y-4">
+        <h1 className="title font-bold text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight">
+          {post.metadata.title}
+        </h1>
+        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground border-l-4 border-primary pl-4">
+          <Suspense fallback={<p className="h-5" />}>
+            <p className="text-sm">
+              Published on {formatDate(post.metadata.publishedAt)}
+            </p>
+          </Suspense>
+          <span>•</span>
+          <p className="text-sm">By {DATA.name}</p>
+        </div>
+        {post.metadata.summary && (
+          <p className="text-base sm:text-lg text-muted-foreground italic border-l-4 border-muted pl-4 py-2">
+            {post.metadata.summary}
           </p>
-        </Suspense>
-      </div>
+        )}
+      </header>
       <article
-        className="prose dark:prose-invert"
+        className="prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-base prose-p:leading-relaxed prose-p:my-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-code:text-primary prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:border max-w-none"
         dangerouslySetInnerHTML={{ __html: post.source }}
       ></article>
     </section>

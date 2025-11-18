@@ -1,0 +1,123 @@
+---
+title: "My First Freelance Project: Life-Biotech"
+publishedAt: "2024-06-18"
+summary: "The story of how I built a full-stack pharmaceutical website with authentication, order management, and payment integration—my first real-world client project."
+---
+
+## My First Freelance Project: Life-Biotech
+
+Every developer remembers their first real client project. Mine was **Life-Biotech**—a full-stack website for a pharmaceutical manufacturing brand. It wasn't just another portfolio piece. It was real. It had deadlines, client expectations, and actual users who would depend on it.
+
+This is the story of how I built it, the challenges I faced, and what I learned along the way.
+
+---
+
+### The Beginning: A Real Problem to Solve
+
+Life-Biotech approached me with a clear problem: they needed an online presence where customers could browse pharmaceutical products, place orders, and make secure payments. They wanted something professional, fast, and reliable.
+
+At first, I was nervous. This wasn't a tutorial project or a college assignment. This was a business that trusted me to deliver something that would represent their brand and handle real transactions.
+
+But I knew I had the skills. I had React, Next.js, and a strong foundation in backend development. So I took a deep breath and said yes.
+
+---
+
+### Building the Foundation
+
+I started with **Next.js** for the frontend because of its performance, SEO capabilities, and server-side rendering. For a business website, loading speed and discoverability were crucial.
+
+The tech stack I chose:
+- **Frontend**: React + Next.js + Tailwind CSS
+- **Backend**: Supabase (PostgreSQL database + Auth + Storage)
+- **Authentication**: Supabase Auth with secure email/password authentication
+- **Database**: Supabase PostgreSQL for structured product and order data
+- **Payment Gateway**: Integrated a secure payment solution for online orders
+- **Deployment**: Vercel for fast, global delivery
+
+**Why Supabase?**  
+Supabase was a game-changer. Instead of building a custom backend, I got a production-ready PostgreSQL database, built-in authentication, and real-time capabilities out of the box. This allowed me to focus on the business logic and user experience rather than reinventing the wheel.
+
+The design had to be clean, professional, and trustworthy—qualities essential for a pharmaceutical brand. I spent hours refining the UI, making sure every element felt polished.
+
+---
+
+### The Challenges I Faced
+
+**1. Authentication System**
+
+Building a secure login wasn't just about storing passwords. With **Supabase Auth**, I implemented:
+- Secure email/password authentication with automatic password hashing
+- Row Level Security (RLS) policies for data access control
+- Role-based access control (admin vs. customer)
+- Password recovery and email verification flows
+- Session management with secure JWT tokens
+
+What I loved about Supabase Auth was that it handled the complex security aspects automatically—password hashing, token refresh, email verification—while giving me full control over the user experience. I spent time perfecting the authentication flows and testing edge cases. When users could securely sign up, log in, and recover their passwords seamlessly, the satisfaction was unmatched.
+
+**2. Order Management System**
+
+The order creation flow had to be intuitive yet robust:
+- Users browse products stored in Supabase
+- Add items to cart (persisted in Supabase with user session)
+- Fill in delivery details
+- Confirm order and proceed to payment
+
+I leveraged Supabase's PostgreSQL database to create relational tables for products, orders, and order items. Using Supabase's real-time subscriptions, I built a dynamic cart system that persisted across sessions and updated instantly. The admin dashboard could track orders in real-time—every new order appeared immediately without refreshing. Every click, every transition had to feel seamless.
+
+**3. Payment Gateway Integration**
+
+This was the most nerve-wracking part. Handling real money meant zero room for error. I integrated a payment gateway, tested it extensively in sandbox mode, and worked closely with the client to ensure compliance with security standards.
+
+When the first test transaction went through successfully, I felt a rush of accomplishment.
+
+**4. Responsive Design**
+
+The website had to work flawlessly on mobile, tablet, and desktop. I used Tailwind CSS's responsive utilities and tested on multiple devices. Every button, every form, every image had to adapt perfectly.
+
+---
+
+### Deployment and Launch
+
+After weeks of development, testing, and iteration, the moment came: **deployment**.
+
+I deployed the site on **Vercel** and connected it to the custom domain: **[lifebiotech.in](https://lifebiotech.in)**
+
+Watching it go live was surreal. My code, now serving real users. My design, now representing a real business.
+
+---
+
+### What I Learned
+
+This project taught me more than any course ever could:
+
+✅ **Client Communication**: Understanding requirements, managing expectations, and delivering on time  
+✅ **Security Matters**: Authentication and payment handling require extreme care  
+✅ **Real-World Constraints**: Deadlines, performance optimization, and scalability aren't optional  
+✅ **Problem-Solving**: When things break (and they will), you figure it out  
+✅ **Confidence**: I can build real products that solve real problems
+
+---
+
+### The Result
+
+Today, Life-Biotech's website is live, serving customers, processing orders, and running smoothly. It's a project I'm genuinely proud of.
+
+But more than that, it proved to me that I'm not just learning to code—I'm learning to **build**.
+
+And that's a feeling worth chasing.
+
+---
+
+**Tech Stack:**
+- React
+- Next.js
+- Tailwind CSS
+- Supabase (Auth + PostgreSQL + Storage)
+- Vercel
+
+**Live Site:** [lifebiotech.in](https://lifebiotech.in)  
+**Source Code:** [GitHub Repository](https://github.com/Himanshu-0143/lifebiotech)
+
+---
+
+*This was just the beginning. More projects, more challenges, more growth ahead.* 🚀
